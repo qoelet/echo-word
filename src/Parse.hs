@@ -70,7 +70,7 @@ parseVerse s = do
 
     replaceCurly :: String -> String
     replaceCurly s
-      | length s > 0 = "{" ++ s
+      | not (null s) = "{" ++ s
       | otherwise = s
 
 parseBookName :: String -> (Maybe String, String)
